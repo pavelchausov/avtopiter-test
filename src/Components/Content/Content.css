@@ -1,0 +1,49 @@
+.wrapper {
+    background: #95d12e;
+    margin: 0 auto;
+    width: 736px;
+    height: 739px;
+}
+
+.title {
+    height: 142px;
+    background: #00ccad;
+}
+
+[data-reach-tab-panel] {
+    outline: none;
+  }
+  
+  [data-reach-tab-list] {
+    display: flex;
+    background: hsla(0, 0%, 0%, 0.05);
+  }
+  
+  [data-reach-tab] {
+    display: inline-block;
+    border: none;
+    padding: 0.25em 0.5em;
+    margin: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-bottom: solid 1px transparent;
+    outline: none;
+  }
+  
+  [data-reach-tab]:active {
+    background: hsla(0, 0%, 0%, 0.05);
+  }
+  
+  [data-reach-tab]:disabled {
+    opacity: 0.25;
+    cursor: default;
+  }
+  
+  [data-reach-tab][data-selected] {
+    border-bottom-color: inherit;
+  }
+  

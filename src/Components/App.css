@@ -1,0 +1,11 @@
+.container {
+  text-align: center;
+}
+.wrapper {
+  margin: 0 auto;
+}
+.someClass {
+  width: 1000px;
+  height: 200px;
+  background: red;
+}

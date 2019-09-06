@@ -1,0 +1,11 @@
+ul.foundOrgsList {
+  position: absolute;
+  background: #f4f4f4;
+  border: 1px solid black;
+  margin: 0px;
+}
+
+ul.foundOrgsList > li {
+  display: block;
+  margin: 5px 0;
+}
