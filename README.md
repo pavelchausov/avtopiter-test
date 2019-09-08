@@ -1,3 +1,8 @@
+
+## Check how it works
+
+Visit https://pavelchausov.github.io/avtopiter/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
