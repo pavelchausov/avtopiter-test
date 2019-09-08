@@ -3,7 +3,6 @@ import { Tabs, TabList, Tab, TabPanels, TabPanel } from "@reach/tabs";
 import FirstTab from './FirstTab';
 import SecondTab from './SecondTab';
 import './Content.css';
-import base from './base.json';
 import axios from 'axios';
 import { convertObj } from './utils.js';    
 
@@ -12,10 +11,71 @@ export default class Content extends React.Component {
         super(props);
         this.state = {
             foundItems: [],
-            savedItems: {},
+            savedItems: {
+                '164400383800': {
+                    addressData: {
+                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        locationStr: "г Альметьевск",
+                    },
+                    ceoName: "Маганов Наиль Ульфатович",
+                    inn: "164400383800",
+                    itemName: "00ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
+                    kpp: "164401001",
+                    ogrn: "1021601623702",
+                },
+                '164400383811': {
+                    addressData: {
+                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        locationStr: "г Альметьевск",
+                    },
+                    ceoName: "Маганов Наиль Ульфатович",
+                    inn: "164400383811",
+                    itemName: "11ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
+                    kpp: "164401001",
+                    ogrn: "1021601623702",
+                },
+                '164400383822': {
+                    addressData: {
+                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+                        locationStr: "г Альметьевск",
+                    },
+                    ceoName: "Маганов Наиль Ульфатович",
+                    inn: "164400383822",
+                    itemName: "22ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
+                    kpp: "164401001",
+                    ogrn: "1021601623702",
+                },
+            }, //TODO: change it to new Map structutre
+            // selectedItem: {
+            //     addressData: {
+            //         addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+            //         addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
+            //         locationStr: "г Альметьевск",
+            //     },
+            //     ceoName: "Маганов Наиль Ульфатович",
+            //     inn: "1644003838",
+            //     itemName: "ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
+            //     kpp: "164401001",
+            //     ogrn: "1021601623702",
+            // },
             selectedItem: {},
             inputValue: '',
+            showFoundItems: false,
         };
+    }
+    handleInputFocus = () => {
+        this.setState({ showFoundItems: true });
+    }
+
+    showFound = () => {
+        const {
+            foundItems,
+            showFoundItems,
+        } = this.state;
+        return foundItems.length > 0 && showFoundItems;
     }
 
     handeInput = ({ target: {value} }) => {
@@ -25,7 +85,10 @@ export default class Content extends React.Component {
 
     handleItemSelect = (item) => (e) => {
         e.preventDefault();
-        this.setState({ selectedItem: { ...item }})
+        this.setState({
+            selectedItem: { ...item },
+            showFoundItems: false,
+        })
     }
 
     handleSaveItemClick = (item) => (e) => {
@@ -55,17 +118,11 @@ export default class Content extends React.Component {
                 },
             }
         );
-        console.log({
-            term,
-            found: data.suggestions,
+        this.setState({
+            foundItems: data.suggestions.map(item => convertObj(item)),
+            showFoundItems: true,
         });
-        this.setState({ foundItems: data.suggestions.map(item => convertObj(item)) });
     }
-
-    // getOrganizations = (term) => {
-    //     const found = (term) ? base.suggestions.filter(org => org.data.name.full.indexOf(term.toUpperCase()) >= 0) : [];
-    //     this.setState({ foundItems: found });
-    // }
 
     render() {
         const {
@@ -73,6 +130,7 @@ export default class Content extends React.Component {
             savedItems,
             selectedItem,
             inputValue,
+            showFoundItems,
         } = this.state;
         return (
             <div className="wrapper">
@@ -82,25 +140,37 @@ export default class Content extends React.Component {
                 <Tabs>
                     <TabList>
                         <Tab>Новая организация</Tab>
-                        <Tab>Сохраненные организации ({Object.keys(savedItems).length})</Tab>
+                        <Tab>
+                            <span>Сохраненные организации </span>
+                            <span className="saved-items-counter">({Object.keys(savedItems).length})</span>
+                        </Tab>
                     </TabList>
                     <TabPanels>
                         <TabPanel>
-                            <FirstTab 
-                                inputValue={inputValue}
-                                handeInput={this.handeInput}
-                                handleItemSelect={this.handleItemSelect}
-                                handleSaveItemClick={this.handleSaveItemClick}
-                                foundItems={foundItems}
-                                selectedItem={selectedItem}
-                                savedItems={savedItems}
-                            />
+                            <div className="tab-content">
+                                <FirstTab 
+                                    inputValue={inputValue}
+                                    handeInput={this.handeInput}
+                                    handleItemSelect={this.handleItemSelect}
+                                    handleSaveItemClick={this.handleSaveItemClick}
+                                    handleInputFocus={this.handleInputFocus}
+                                    handleFoundFocus={this.handleFoundFocus}
+                                    handleFocus={this.handleFocus}
+                                    showFound={this.showFound}
+                                    foundItems={foundItems}
+                                    selectedItem={selectedItem}
+                                    savedItems={savedItems}
+                                    showFoundItems={showFoundItems}
+                                />
+                            </div>
                         </TabPanel>
                         <TabPanel>
+                            <div className="tab-content">
                                 <SecondTab
                                     savedItems={savedItems}
                                     handleDeleteItemClick={this.handleDeleteItemClick}
                                 />
+                            </div>
                         </TabPanel>
                     </TabPanels>
                 </Tabs>

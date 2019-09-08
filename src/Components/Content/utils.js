@@ -34,7 +34,7 @@ const makeAddress = (address) => {
             city,
         },
     } = address;
-    const locationStr = (city) ? `${city_type} ${city}` : `${settlement_type} ${settlement}`;
+    const locationStr = (city) ? `${city_type}. ${city}` : `${settlement_type}. ${settlement}`;
     return {
         addressValue,
         addressWithPostal: `${postalCode} ${addressValue}`,

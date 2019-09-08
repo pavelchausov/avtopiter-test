@@ -1,49 +1,71 @@
 .wrapper {
-    background: #95d12e;
+    background: #FFFFFF;
     margin: 0 auto;
     width: 736px;
     height: 739px;
 }
-
+.title-container {
+  background: #E5E5E5;
+  padding-top: 56px;
+  padding-bottom: 32px
+}
 .title {
-    height: 142px;
-    background: #00ccad;
+  font-size: 40px;
+  line-height: 49px;
+
+}
+
+.saved-items-counter {
+  color: #403f3f;
+}
+
+.tab-content {
+  background: #FFFFFF;
+  padding: 32px 24px;
 }
 
 [data-reach-tab-panel] {
-    outline: none;
-  }
+  outline: none;
+
+}
   
-  [data-reach-tab-list] {
-    display: flex;
-    background: hsla(0, 0%, 0%, 0.05);
-  }
-  
-  [data-reach-tab] {
-    display: inline-block;
-    border: none;
-    padding: 0.25em 0.5em;
-    margin: 0;
-    background: none;
-    color: inherit;
-    font: inherit;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    border-bottom: solid 1px transparent;
-    outline: none;
-  }
-  
-  [data-reach-tab]:active {
-    background: hsla(0, 0%, 0%, 0.05);
-  }
-  
-  [data-reach-tab]:disabled {
-    opacity: 0.25;
-    cursor: default;
-  }
-  
-  [data-reach-tab][data-selected] {
-    border-bottom-color: inherit;
-  }
-  
+[data-reach-tab-list] {
+  display: flex;
+  height: 37px;
+  background: #E5E5E5;
+}
+
+[data-reach-tab] {
+  font-weight: Bold;
+  font-size: 12px;
+  display: inline-block;
+  border: none;
+  padding: 8px 24px 11px 24px;
+  margin-right: 8px;
+  background: none;
+  color: #B9B9B9;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  border-top: 2px solid transparent;
+}
+
+[data-reach-tab]:active {
+}
+
+[data-reach-tab]:disabled {
+  opacity: 0.25;
+  cursor: default;
+}
+
+[data-reach-tab][data-selected] {
+  background: #FFFFFF;
+  color: black;
+  border-bottom-color: inherit;
+  border-top: 2px solid #F50634;
+}
+
+[data-reach-tab][data-selected] > .saved-items-counter {
+  color: #F50634;
+}

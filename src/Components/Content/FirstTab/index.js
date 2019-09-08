@@ -9,39 +9,53 @@ export default class FirstTab extends React.Component {
             foundItems,
             handeInput,
             handleItemSelect,
+            handleInputFocus,
             selectedItem,
             handleSaveItemClick,
             savedItems,
+            showFound,
         } = this.props;
-        console.log(foundItems);
         return (
             <>
-                <form>
+                <form autoComplete="off">
+                    <label htmlFor="input" className="input-label">Организация или ИП</label>
                     <input
+                        id="input"
+                        role="searchbox"
                         value={inputValue}
                         onChange={handeInput}
+                        className="input-field"
+                        placeholder="Введите название, ИНН или адрес организации"
+                        onFocus={handleInputFocus}
                     />
                 </form>
-                {foundItems.length > 0 && (<ul className="foundOrgsList">
-                    {foundItems.map(item => {
-                        const {
-                            itemName,
-                            addressData: {
-                                locationStr
-                            },
-                            inn,
-                        } = item;
-                        return (
-                            <li key={inn}>
-                                <a href='#' onClick={handleItemSelect(item)}>
-                                    <div className="foundOrganization__name">{itemName}</div>
-                                    <div className="foundOrganization__inn">{inn}</div>
-                                    <div className="foundOrganization__city">{locationStr}</div>
-                                </a>
-                            </li>
-                        );
-                    })}
-                </ul>)}
+                {showFound() && (
+                    <ul
+                        className="found-items"
+                        id="found"
+                    >
+                        {foundItems.map(item => {
+                            const {
+                                itemName,
+                                addressData: {
+                                    locationStr
+                                },
+                                inn,
+                            } = item;
+                            return (
+                                <li key={inn}>
+                                    <button onClick={handleItemSelect(item)} className="found-item">
+                                        <div className="found-item__name">{itemName}</div>
+                                        <div className="found-item__rest">
+                                            <span className="found-item__inn">{inn}</span>
+                                            <span className="found-item__rest">{locationStr}</span>
+                                        </div>
+                                    </button>
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
                 <SelectedItem
                     item={selectedItem}
                     handleSaveItemClick={handleSaveItemClick}
