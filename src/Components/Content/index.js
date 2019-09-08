@@ -11,56 +11,7 @@ export default class Content extends React.Component {
         super(props);
         this.state = {
             foundItems: [],
-            savedItems: {
-                '164400383800': {
-                    addressData: {
-                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        locationStr: "г Альметьевск",
-                    },
-                    ceoName: "Маганов Наиль Ульфатович",
-                    inn: "164400383800",
-                    itemName: "00ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
-                    kpp: "164401001",
-                    ogrn: "1021601623702",
-                },
-                '164400383811': {
-                    addressData: {
-                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        locationStr: "г Альметьевск",
-                    },
-                    ceoName: "Маганов Наиль Ульфатович",
-                    inn: "164400383811",
-                    itemName: "11ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
-                    kpp: "164401001",
-                    ogrn: "1021601623702",
-                },
-                '164400383822': {
-                    addressData: {
-                        addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-                        locationStr: "г Альметьевск",
-                    },
-                    ceoName: "Маганов Наиль Ульфатович",
-                    inn: "164400383822",
-                    itemName: "22ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
-                    kpp: "164401001",
-                    ogrn: "1021601623702",
-                },
-            }, //TODO: change it to new Map structutre
-            // selectedItem: {
-            //     addressData: {
-            //         addressValue: "Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-            //         addressWithPostal: "423450 Респ Татарстан, г Альметьевск, ул Ленина, д 75",
-            //         locationStr: "г Альметьевск",
-            //     },
-            //     ceoName: "Маганов Наиль Ульфатович",
-            //     inn: "1644003838",
-            //     itemName: "ПАО \"ТАТНЕФТЬ\" ИМ. В.Д. ,ШАШИНА",
-            //     kpp: "164401001",
-            //     ogrn: "1021601623702",
-            // },
+            savedItems: {}, //TODO: change it to new Map structutre
             selectedItem: {},
             inputValue: '',
             showFoundItems: false,
