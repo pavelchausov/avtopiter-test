@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a9ac62b591b61050891063b81ff12618",
+    "revision": "ebbead483ac68db38bccac66ecdb83ee",
     "url": "/avtopiter/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avtopiter/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "a032fd2f332aba3aa55b",
+    "revision": "52b7448ca410681fe46c",
     "url": "/avtopiter/static/css/main.91d7d250.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/avtopiter/static/js/2.c628ed7e.chunk.js"
   },
   {
-    "revision": "a032fd2f332aba3aa55b",
-    "url": "/avtopiter/static/js/main.ab2d69d6.chunk.js"
+    "revision": "52b7448ca410681fe46c",
+    "url": "/avtopiter/static/js/main.b58d4aea.chunk.js"
   },
   {
     "revision": "061eb4c21eba9647bbea",
