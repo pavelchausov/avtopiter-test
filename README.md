@@ -3,7 +3,7 @@
 Приложение реализует поиск и сохранение организации. 
 Поиск осуществляется по названию, ИНН или адресу компании.
 Организацию можно "сохранить", сохраненные организации отображаются во втором табе.
-Ссылка https://pavelchausov.github.io/avtopiter/
+Ссылка на билд: https://pavelchausov.github.io/avtopiter/
 
 ## Util info
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
