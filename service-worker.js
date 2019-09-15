@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/avtopiter/precache-manifest.d36c02467705f85b208a4d3765185488.js"
+  "/avtopiter/precache-manifest.8dd419c4c0cd8cf6b505a6a94b1ba68a.js"
 );
 
 self.addEventListener('message', (event) => {
