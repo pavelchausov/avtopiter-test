@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "df79fcdc184c38e8d8ef51a2c77c62da",
+    "revision": "c778e950f513ef00bf981acc4820c0f7",
     "url": "/avtopiter/index.html"
   },
   {
-    "revision": "d63ec0d6b3a0f6f0daaf",
+    "revision": "46ca7e07a51bf07ac9f0",
     "url": "/avtopiter/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "91a1259c6800cd9e4c4e",
-    "url": "/avtopiter/static/css/main.3b8e6e66.chunk.css"
+    "revision": "9fb5932dd94344828e1d",
+    "url": "/avtopiter/static/css/main.90f59c17.chunk.css"
   },
   {
-    "revision": "d63ec0d6b3a0f6f0daaf",
-    "url": "/avtopiter/static/js/2.c628ed7e.chunk.js"
+    "revision": "46ca7e07a51bf07ac9f0",
+    "url": "/avtopiter/static/js/2.cc55ce96.chunk.js"
   },
   {
-    "revision": "91a1259c6800cd9e4c4e",
-    "url": "/avtopiter/static/js/main.301f31ad.chunk.js"
+    "revision": "9fb5932dd94344828e1d",
+    "url": "/avtopiter/static/js/main.5d81833d.chunk.js"
   },
   {
     "revision": "061eb4c21eba9647bbea",
