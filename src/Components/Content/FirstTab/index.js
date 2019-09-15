@@ -17,7 +17,7 @@ export default class FirstTab extends React.Component {
         } = this.props;
         return (
             <>
-                <form autoComplete="off">
+                <form autoComplete="off" onSubmit={(e) => { e.preventDefault() }}>
                     <label htmlFor="input" className="input-label">Организация или ИП</label>
                     <input
                         id="input"
