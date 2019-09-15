@@ -1,6 +1,9 @@
 ul.saved-items {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    height: 600px;
 }
 
 ul.saved-items > li.saved-item {

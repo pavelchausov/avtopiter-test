@@ -22,7 +22,7 @@ export default class SecondTab extends React.Component {
                         kpp,
                         ogrn,
                     } = savedItems[item];
-                    return (index < 3) ? (
+                    return (
                         <li key={inn} className="saved-item">
                             <div className="saved-item__header">
                                 <div className="saved-item__name">{itemName}</div>
@@ -55,7 +55,7 @@ export default class SecondTab extends React.Component {
                                 <span className="saved-item__field-info">{ceoName}</span>
                             </div>
                         </li>
-                    ) : null;
+                    );
                 })}
             </ul>
         )
