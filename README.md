@@ -5,9 +5,6 @@
 Организацию можно "сохранить", сохраненные организации отображаются во втором табе.
 Ссылка на билд: https://pavelchausov.github.io/avtopiter/
 
-## Util info
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Available Scripts
 
 In the project directory, you can run:
